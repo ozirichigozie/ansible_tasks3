@@ -1,0 +1,5 @@
+- name: restart_apache
+  tags: restart_apache
+  service:
+    name: "{{ apache }}"
+    state: restarted

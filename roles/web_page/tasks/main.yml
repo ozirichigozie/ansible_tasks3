@@ -1,0 +1,9 @@
+- name: add sudoers file for cloudlord
+  tags: always
+  copy:
+    src: default_site.html
+    dest: /var/www/html/index.html
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart_apache

@@ -1,0 +1,12 @@
+- name: install apache
+  tags: install_apache
+  package:
+    name: "{{ apache }}"
+    state: latest
+
+- name: start apache
+  tags: start_apache
+  service:
+    name: "{{ apache }}"
+    state: started
+    enabled: yes

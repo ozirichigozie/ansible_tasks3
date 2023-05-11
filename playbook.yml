@@ -1,0 +1,35 @@
+---
+- name: update and install php
+  hosts: parent
+  pre_tasks:
+  
+  - name: install updates
+    package:
+      update_cache: yes
+      state: latest
+
+  - name: install php
+    package:
+      name: "{{ php }}"
+      state: latest
+
+
+- name: setup apache
+  hosts: parent
+  roles:
+  - setup_apache
+  - web_page
+
+
+- name: install work-tools on webservers
+  hosts: webservers
+  roles:
+  - prep
+  - jenkins
+  - terraform
+
+
+- name: install docker on webservers
+  hosts: webservers
+  roles:
+  - docker

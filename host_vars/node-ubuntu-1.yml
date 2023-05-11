@@ -1,0 +1,9 @@
+ansible_host: 35.170.243.223
+user: ubuntu
+apache: apache2
+php: libapache2-mod-php
+sudo_group: sudo
+container_count: 1
+container_name: docker
+container_image: ubuntu
+container_cmd: sleep 1

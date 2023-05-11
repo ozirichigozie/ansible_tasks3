@@ -1,0 +1,9 @@
+ansible_host: 100.27.31.8
+user: ec2-user
+apache: httpd
+php: php
+sudo_group: wheel
+container_count: 1
+container_name: docker
+container_image: ubuntu
+container_cmd: sleep 1
