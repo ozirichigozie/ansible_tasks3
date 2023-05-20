@@ -1,6 +1,7 @@
-ansible_host: 52.207.254.61
-user: ubuntu
-apache: apache2
+ansible_host: 192.168.53.22
+# user: ubuntu
+password: ansible007
+apache: apache2 
 php: libapache2-mod-php
 sudo_group: sudo
 container_count: 1

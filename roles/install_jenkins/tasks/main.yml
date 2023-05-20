@@ -22,7 +22,7 @@
   service:
     name: jenkins
     state: started
-    enabled: yes
+    enabled: true
 
 - name: Allow all access to port 8080
   community.general.ufw:

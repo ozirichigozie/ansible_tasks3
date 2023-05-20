@@ -1,0 +1,11 @@
+- name: Install required system packages
+  package:
+    pkg:
+    - aptitude
+    - apt-transport-https
+    - ca-certificates
+    - software-properties-common
+    - unzip
+    - virtualenv
+    state: latest
+    update_cache: true

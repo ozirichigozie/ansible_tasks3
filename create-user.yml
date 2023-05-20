@@ -1,0 +1,25 @@
+---
+- name: create new sudo user
+  hosts: parent
+  tasks:
+  - name: create user, ansible007
+    tags: always
+    user:
+      name: ansible007
+      password: "{{ password | password_hash('sha512') }}"
+      groups: "{{ sudo_group }}"
+
+  - name: add ssh_key to ansible007
+    tags: always
+    authorized_key:
+      user: ansible007
+      key: "{{lookup('ansible.builtin.file', '~/.ssh/id_ed25519.pub') }}"
+
+  - name: copy authentication key file to the new user, ansible007
+    tags: always
+    copy:
+      src: ~/.ssh/id_ed25519.pub
+      dest: /home/ansible007/id_ed25519.pub
+      mode: 0444
+      owner: ansible007
+      group: ansible007
