@@ -4,10 +4,10 @@ ubuntu-node-2
 centos-node-1
 centos-node-2
 
-[webservers]
+[workstation]
 ubuntu-node-1
 ubuntu-node-2
 
-[centos]
+[webserver]
 centos-node-1
 centos-node-2
