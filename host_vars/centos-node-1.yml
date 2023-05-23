@@ -1,10 +1,5 @@
 ansible_host: 192.168.53.61
-# user: ec2-user
-password: ansible007
+password: ansible3
 apache: httpd
 php: php
 sudo_group: wheel
-container_count: 1
-container_name: docker
-container_image: ubuntu
-container_cmd: sleep 1

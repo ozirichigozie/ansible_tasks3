@@ -7,5 +7,6 @@
     - software-properties-common
     - unzip
     - virtualenv
+    - gnupg
     state: latest
     update_cache: true

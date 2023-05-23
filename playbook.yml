@@ -20,15 +20,15 @@
       update_cache: true
 
 
-- name: setup apache and deploy web page
-  hosts: parent
+- name: setup apache and deploy web page on the webserver group
+  hosts: webserver
   roles:
   - setup_apache
   - deploy_webpage
 
 
-- name: install work-tools on webservers
-  hosts: webservers
+- name: install work-tools on the workstation group
+  hosts: workstation
   roles:
   - install_dependencies
   - install_jenkins
