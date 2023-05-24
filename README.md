@@ -11,3 +11,4 @@
 >
 > - Write a role to install Jenkins and open port 8080 with Firewall.
 >
+Find detailed explanation on [my blog](https://oziri.medium.com/ansible-tutorials-3-roles-58954fca5d56).
